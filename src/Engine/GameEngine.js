@@ -49,7 +49,8 @@ define(function( require )
 
 
 	/**
-	 * Initialize Game
+	 * Инициализирует игру.
+	 * Настраивает рендерер, загружает файлы игры и запускает основной игровой цикл.
 	 */
 	function init()
 	{
@@ -145,7 +146,8 @@ define(function( require )
 
 
 	/**
-	 * Reload the game
+	 * Перезагружает игру.
+	 * Сбрасывает текущее состояние игры, очищает компоненты пользовательского интерфейса и возвращает к экрану выбора сервера.
 	 */
 	function reload()
 	{
@@ -195,9 +197,9 @@ define(function( require )
 
 
 	/**
-	 * Once a server is selected
+	 * Вызывается при выборе сервера для входа.
 	 *
-	 * @param {number} index in server list
+	 * @param {number} index Индекс выбранного сервера в списке серверов.
 	 */
 	function onLoginServerSelected( index )
 	{
@@ -211,7 +213,8 @@ define(function( require )
 
 
 	/**
-	 * Ask to exit window
+	 * Вызывается при запросе на выход из игры.
+	 * Останавливает все игровые процессы и возвращает на главный экран.
 	 */
 	function onExit()
 	{
@@ -223,9 +226,10 @@ define(function( require )
 
 
 	/**
-	 * Loading clientinfo file
+	 * Загружает файл clientinfo.
+	 * Извлекает информацию о сервере из файла clientinfo.xml.
 	 *
-	 * @param {function} callback
+	 * @param {function} callback Функция обратного вызова, которая будет вызвана после загрузки информации о клиенте.
 	 */
 	function loadClientInfo( callback )
 	{
